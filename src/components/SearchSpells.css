@@ -1,0 +1,27 @@
+.type {
+  display: flex;
+  justify-content: space-around;
+}
+.blob {
+  /* animation: float 5s infinite alternate; */
+}
+
+.disappear {
+  animation: fade 3s forwards;
+}
+
+@keyframes float {
+  from {
+    opacity: 0;
+    font-size: 10px;
+  }
+  to {
+    opacity: 1;
+    font-size: 30px;
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
