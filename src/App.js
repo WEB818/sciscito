@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import config from "./config";
-
+import Header from "./components/Header/Header";
 import SearchSpells from "./components/SearchSpells";
 import ListSpells from "./components/ListSpells";
-import "./App.css";
+import { ReactComponent as Scroll } from "./components/Scroll/scroll.svg";
+import { ReactComponent as CurseScroll } from "./components/Scroll/cursescroll.svg";
+import "./App.scss";
+import "./components/Scroll/Scroll.scss";
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +21,6 @@ class App extends Component {
       restrictedSection: false,
       displayResults: false,
       filtered: false,
-      filteredTypes: [],
       error: null,
     };
   }
@@ -53,12 +55,17 @@ class App extends Component {
       type: "",
       restrictedSection: false,
       filtered: false,
+      queryText: "",
     });
   };
 
   componentDidMount() {
-    let url = `https://www.potterapi.com/v1/spells?key=${config.key}`;
-    fetch(url)
+    // let url = `https://cors-anywhere.herokuapp.com/https://www.potterapi.com/v1/spells?key=${config.key}`;
+    fetch("data.json", {
+      headers: {
+        "Access-Control-Allow-Origin": "http://localhost:3000/",
+      },
+    })
       .then((res) => res.json())
       .then((res) => this.splitSpells(res))
       .catch((err) => this.handleError(err.error));
@@ -85,6 +92,8 @@ class App extends Component {
       spells: this.state.curses,
       type: "Curse",
       restrictedSection: true,
+      queryText: "",
+      displayResults: false,
     });
   };
 
@@ -100,15 +109,17 @@ class App extends Component {
     let filteredByType = this.filterSpellsByType(spells, type);
     this.setState({
       filtered: true,
-      filteredTypes: filteredByType,
+      spells: filteredByType,
     });
   };
 
   removeFilter = () => {
     this.setState({
       filtered: false,
+      spells: this.state.noncurses,
     });
   };
+
   render() {
     const {
       spells,
@@ -119,7 +130,6 @@ class App extends Component {
       displayResults,
       restrictedSection,
       filtered,
-      filteredTypes,
       error,
     } = this.state;
     let order;
@@ -147,8 +157,14 @@ class App extends Component {
       });
 
     return (
-      <div>
+      <div className="App">
         {error ? <p>Something went wrong. Please try again.</p> : ""}
+        <Header id="header" />
+        {restrictedSection ? (
+          <CurseScroll className="CurseScroll" />
+        ) : (
+          <Scroll className="Scroll" />
+        )}
         <SearchSpells
           searchSpells={this.searchSpells}
           changeType={this.changeType}
@@ -163,11 +179,13 @@ class App extends Component {
           type={type}
           filtered={filtered}
           restrictedSection={restrictedSection}
+          queryText={queryText}
         />
+
         {displayResults ? (
           <ListSpells
             spells={filteredSpells}
-            filteredByTypeSpells={filteredTypes}
+            filteredByTypeSpells={filteredSpells}
             curses={curses}
             enterRestrictedSection={this.enterRestrictedSection}
             searchSpells={this.searchSpells}

@@ -1,0 +1,83 @@
+.ListSpells,
+.ListCurses {
+  position: absolute;
+  width: 200px;
+  height: 50vh;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  top: 40%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Courgette", cursive;
+  scroll-margin-top: 50%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.ListCurses {
+  color: rgb(202, 202, 202);
+}
+.ListSpells__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 60px;
+  font-size: 20px;
+  width: 300px;
+  font-family: "Kaushan Script", cursive;
+  animation: scrawl 6s ease alternate infinite;
+}
+.no-curses-message {
+  color: rgb(202, 202, 202);
+}
+@keyframes scrawl {
+  from {
+    color: rgb(54, 54, 54);
+  }
+  to {
+    color: rgb(65, 15, 15);
+  }
+}
+.curse-search {
+  font-size: 10px;
+}
+.curse-button {
+  background-color: rgb(65, 15, 15);
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+    auto;
+  box-shadow: 1px 5px 5px #540d0dad;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  font-family: "Kaushan Script", cursive;
+  font-size: 14px;
+  color: rgb(211, 211, 211);
+  animation: entice 10s ease alternate infinite;
+  &:focus {
+    outline: none;
+    box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes entice {
+  from {
+    box-shadow: 0 10px 20px rgb(61, 8, 8),
+      inset 5px 30px 30px 5px rgb(247, 234, 234);
+    color: black;
+  }
+  to {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 20px 30px rgba(119, 26, 26, 0.5),
+      inset 0px 0px 30px 5px rgba(255, 230, 230, 0.76);
+    margin-top: -5%;
+  }
+}

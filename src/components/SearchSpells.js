@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { countType } from "../helpers";
-import Spell from "../components/Spell";
-import "./SearchSpells.css";
+
+import "./SearchSpells.scss";
 
 export default class SearchSpells extends Component {
-  displayFilteredTypes = (spells) => {
-    console.log("did not work");
-    return <Spell name="worked!" />;
-  };
   handleClick = (type, spells) => {
     this.props.changeType(type);
-    let spellsByType = this.props.spellsByType(spells, type);
+    this.props.spellsByType(spells, type);
     this.setState({
       filtered: true,
     });
-    this.displayFilteredTypes(spellsByType);
   };
 
   displayTypes = (obj) => {
@@ -23,18 +18,18 @@ export default class SearchSpells extends Component {
         return (
           <button
             key={idx}
+            className="spell-type"
             onClick={() =>
               this.props.handleFilter(type["type"], this.props.spells)
             }
           >
-            <p>
-              {type["type"]} <span className="blob">{type["count"]}</span>
-            </p>
+            <p className="blob">{type["count"]}</p>
+            {type["type"]}
           </button>
         );
       } else {
         return (
-          <div className="disappear" key={idx}>
+          <div className="spell-type__disappear" key={idx}>
             <p>{type["type"]}</p>
           </div>
         );
@@ -51,18 +46,18 @@ export default class SearchSpells extends Component {
     this.props.searchSpells("");
     this.props.clearResults();
   };
+
   render() {
     const typeArr = [
-      { icon: "spell", type: "Spell" },
-      { icon: "charm", type: "Charm" },
-      { icon: "ench", type: "Enchantment" },
-      { icon: "jinx", type: "Jinx" },
-      { icon: "hex", type: "Hex" },
+      { type: "Spell" },
+      { type: "Charm" },
+      { type: "Enchantment" },
+      { type: "Jinx" },
+      { type: "Hex" },
     ];
     let typeObj = typeArr.map((type) => {
       if (this.props.displayResults) {
         return {
-          icon: type.icon,
           type: type.type,
           count: this.countByType(type["type"]),
         };
@@ -74,38 +69,72 @@ export default class SearchSpells extends Component {
     let results = this.displayTypes(typeObj);
 
     return (
-      <>
-        <div className="type">{results}</div>
+      <div className="SearchSpells">
+        <div className="SearchSpells__types">{results}</div>
         {this.props.filtered && (
-          <button onClick={this.props.removeFilter}>Reveal All</button>
+          <button className="reveal" onClick={this.props.removeFilter}>
+            Reveal All
+          </button>
         )}
-        {!this.props.restrictedSection && (
-          <div>
-            <label htmlFor="search">What dost thou seek?</label>
+
+        <div className="SearchSpells__container">
+          <div className="SearchSpells__search">
             <input
               id="search"
+              className="search"
               type="text"
               name="spell"
+              placeholder="What dost thou seek?"
+              value={this.props.queryText}
               onChange={(e) => this.props.searchSpells(e.target.value)}
             />
-            {!this.props.filtered && (
-              <>
-                <button onClick={(e) => this.props.changeOrder("asc")}>
-                  A - Z
-                </button>
-                <button onClick={(e) => this.props.changeOrder("desc")}>
-                  Z - A
-                </button>
-                <button
-                  onClick={() => this.clearResults(this.props.clearResults)}
-                >
-                  Clear Results
-                </button>
-              </>
+            {this.props.displayResults && (
+              <div className="SearchSpells__filters">
+                {this.props.spells.length > 0 && !this.props.restrictedSection && (
+                  <>
+                    <button
+                      className="filter-options"
+                      onClick={(e) => this.props.changeOrder("asc")}
+                    >
+                      A - Z
+                    </button>
+                    <button
+                      className="filter-options"
+                      onClick={(e) => this.props.changeOrder("desc")}
+                    >
+                      Z - A
+                    </button>
+                  </>
+                )}
+                {this.props.spells.length > 0 && this.props.restrictedSection && (
+                  <>
+                    <button
+                      className="curse-filter-options"
+                      onClick={(e) => this.props.changeOrder("asc")}
+                    >
+                      A - Z
+                    </button>
+                    <button
+                      className="curse-filter-options"
+                      onClick={(e) => this.props.changeOrder("desc")}
+                    >
+                      Z - A
+                    </button>
+                  </>
+                )}
+                {!this.props.restrictedSection && (
+                  <button
+                    className="filter-options"
+                    onClick={() => this.clearResults(this.props.clearResults)}
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
             )}
           </div>
-        )}
-      </>
+        </div>
+      </div>
     );
   }
 }

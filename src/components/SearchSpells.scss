@@ -1,0 +1,318 @@
+.SearchSpells {
+  &__types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  &__search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__filters {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (min-width: 768px) {
+      width: 30vw;
+      justify-content: space-evenly;
+    }
+    @media (min-width: 1440px) {
+      width: 20vw;
+    }
+  }
+}
+
+@keyframes spell {
+  from {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(225, 161, 255);
+    color: rgb(58, 0, 85);
+  }
+  to {
+    margin-top: -5%;
+    margin-left: 5%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(58, 0, 85);
+    color: rgb(225, 161, 255);
+  }
+}
+
+@keyframes charm {
+  from {
+    height: 80px;
+    width: 80px;
+    background-color: rgba(255, 196, 4, 0.75);
+    color: rgb(255, 105, 5);
+    margin-left: 15%;
+  }
+  to {
+    margin-top: 5%;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(255, 105, 5, 0.75);
+    color: rgb(255, 196, 4);
+  }
+}
+@keyframes enchantment {
+  from {
+    height: 80px;
+    width: 80px;
+    background-color: rgb(4, 238, 255);
+    color: rgb(11, 0, 158);
+    margin-top: 5%;
+  }
+  to {
+    margin-left: 10%;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(11, 0, 158);
+    color: rgb(4, 238, 255);
+  }
+}
+@keyframes jinx {
+  from {
+    height: 80px;
+    width: 80px;
+    background-color: rgb(0, 73, 0);
+    color: rgb(30, 255, 30);
+  }
+  to {
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(30, 255, 30);
+    color: rgb(0, 73, 0);
+  }
+}
+@keyframes hex {
+  from {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(230, 105, 105);
+    color: rgb(128, 0, 0);
+  }
+  to {
+    margin-top: -5%;
+    margin-left: 5%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(128, 0, 0);
+    color: rgb(230, 105, 105);
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+}
+@keyframes reveal {
+  from {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+      inset 5px 30px 30px 5px rgb(60, 60, 60);
+    color: white;
+  }
+  to {
+    height: 90px;
+    width: 90px;
+    box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 0.5);
+    margin-top: -5%;
+  }
+}
+.spell-type {
+  position: fixed;
+  top: 5%;
+  border-radius: 50%;
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+    auto;
+  font-family: "Kaushan Script", cursive;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  border: none;
+  text-align: center;
+  background-color: white;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+}
+.reveal {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  border-radius: 50%;
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+    auto;
+  font-family: "Kaushan Script", cursive;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  border: none;
+  text-align: center;
+  animation: reveal 10s ease-in-out infinite alternate;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+  @media (min-width: 1440px) {
+    right: 25%;
+  }
+}
+.spell-type__disappear {
+  position: fixed;
+  top: 5%;
+  border-radius: 50%;
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+    auto;
+  font-family: "Kaushan Script", cursive;
+  border: none;
+  text-align: center;
+  background-color: white;
+}
+.spell-type:nth-child(1) {
+  left: 0%;
+  animation: spell 8s ease-in-out infinite alternate;
+  @media (min-width: 768px) {
+    left: 25%;
+  }
+  @media (min-width: 1440px) {
+    left: 40%;
+  }
+}
+.spell-type__disappear:nth-child(1) {
+  left: 0%;
+  animation: fade 6s ease-out forwards;
+  height: 60px;
+  width: 60px;
+  @media (min-width: 768px) {
+    left: 25%;
+  }
+  @media (min-width: 1440px) {
+    left: 40%;
+  }
+}
+.spell-type:nth-child(2) {
+  left: 10%;
+  animation: charm 4s ease-in-out infinite alternate;
+  @media (min-width: 768px) {
+    left: 30%;
+  }
+}
+.spell-type__disappear:nth-child(2) {
+  left: 10%;
+  animation: fade 4s ease-out forwards;
+  height: 60px;
+  width: 60px;
+  @media (min-width: 768px) {
+    left: 30%;
+  }
+}
+.spell-type:nth-child(3) {
+  left: 30%;
+  font-size: 10px;
+  animation: enchantment 10s ease-in-out infinite alternate;
+  @media (min-width: 768px) {
+    left: 40%;
+  }
+}
+.spell-type__disappear:nth-child(3) {
+  left: 30%;
+  font-size: 10px;
+  animation: fade 2s ease-out forwards;
+  height: 60px;
+  width: 60px;
+  @media (min-width: 768px) {
+    left: 40%;
+  }
+}
+.spell-type:nth-child(4) {
+  right: 20%;
+  animation: jinx 6s ease-in-out infinite alternate;
+  @media (min-width: 768px) {
+    right: 30%;
+  }
+}
+.spell-type__disappear:nth-child(4) {
+  right: 20%;
+  animation: fade 8s ease-out forwards;
+  height: 60px;
+  width: 60px;
+  @media (min-width: 768px) {
+    right: 30%;
+  }
+}
+.spell-type:nth-child(5) {
+  right: 0%;
+  animation: hex 4s ease-in-out infinite alternate;
+  @media (min-width: 768px) {
+    right: 25%;
+  }
+  @media (min-width: 1440px) {
+    right: 40%;
+  }
+}
+.spell-type__disappear:nth-child(5) {
+  right: 0%;
+  animation: fade 10s ease-out forwards;
+  height: 60px;
+  width: 60px;
+  @media (min-width: 768px) {
+    right: 25%;
+  }
+  @media (min-width: 1440px) {
+    right: 40%;
+  }
+}
+.search {
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/phoenix100.png"),
+    auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  top: 35%;
+  z-index: 50;
+  &::placeholder {
+    font-size: 18px;
+    color: #540d0d;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 10px 20px 40px#540d0d,
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 0.75);
+  }
+}
+
+.disappear {
+  top: 5%;
+  border-radius: 50%;
+
+  font-family: "Kaushan Script", cursive;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  border: none;
+  &:focus {
+    outline: none;
+    box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+}

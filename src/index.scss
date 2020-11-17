@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.filter-options,
+.curse-filter-options {
+  background-color: transparent;
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+    auto;
+  box-shadow: 1px 5px 5px #540d0dad;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  font-family: "Kaushan Script", cursive;
+
+  &:focus {
+    outline: none;
+    box-shadow: 10px 20px 40px#000000,
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 0.75);
+
+    animation: engorgio 2s ease-out forwards;
+  }
+}
+.curse-filter-options {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+@keyframes engorgio {
+  to {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    background-color: #540d0d;
+    color: blanchedalmond;
+  }
+}

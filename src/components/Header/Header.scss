@@ -1,0 +1,100 @@
+@keyframes revelio {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+#header {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+#header path {
+  opacity: 0;
+  fill: white;
+  stroke-width: 5;
+}
+#header path:nth-child(1) {
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: revelio 5s ease forwards;
+}
+
+#header path:nth-child(2) {
+  stroke-dasharray: 134;
+  stroke-dashoffset: 134;
+  animation: revelio 5s ease infinite alternate 0.2s;
+}
+
+#header path:nth-child(3) {
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  animation: revelio 5s ease infinite alternate 0.4s;
+}
+#header path:nth-child(4) {
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: revelio 5s ease infinite alternate 0.6s;
+}
+#header path:nth-child(5) {
+  stroke-dasharray: 134;
+  stroke-dashoffset: 134;
+  animation: revelio 5s ease infinite alternate 0.8s;
+}
+#header path:nth-child(6) {
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  animation: revelio 5s ease infinite alternate 1s;
+}
+#header path:nth-child(7) {
+  stroke-dasharray: 149;
+  stroke-dashoffset: 149;
+  animation: revelio 5s ease infinite alternate 1.2s;
+}
+#header path:nth-child(8) {
+  stroke-dasharray: 192;
+  stroke-dashoffset: 192;
+  animation: revelio 5s ease infinite alternate 1.4s;
+}
+#header path:nth-child(9) {
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: revelio 5s ease infinite alternate 1.6s;
+}
+#header path:nth-child(10) {
+  stroke-dasharray: 134;
+  stroke-dashoffset: 134;
+  animation: revelio 5s ease infinite alternate 1.8s;
+}
+#header path:nth-child(11) {
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  animation: revelio 5s ease infinite alternate 2s;
+}
+#header path:nth-child(12) {
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: revelio 5s ease infinite alternate 2.2s;
+}
+#header path:nth-child(13) {
+  stroke-dasharray: 134;
+  stroke-dashoffset: 134;
+  animation: revelio 5s ease infinite alternate 2.4s;
+}
+#header path:nth-child(14) {
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  animation: revelio 5s ease infinite alternate 2.6s;
+}
+#header path:nth-child(15) {
+  stroke-dasharray: 149;
+  stroke-dashoffset: 149;
+  animation: revelio 5s ease infinite alternate 2.8s;
+}
+
+#header path:nth-child(16) {
+  stroke-dasharray: 192;
+  stroke-dashoffset: 192;
+  animation: revelio 5s ease infinite alternate 3s;
+}

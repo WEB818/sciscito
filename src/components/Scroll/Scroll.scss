@@ -1,0 +1,18 @@
+.Scroll,
+.CurseScroll {
+  position: fixed;
+  top: 1%;
+  width: 300px;
+  z-index: -100;
+
+  @media (min-width: 768px) {
+    top: 20%;
+    width: 600px;
+    height: 600px;
+  }
+  @media (min-width: 1024px) {
+    top: 20%;
+    width: 800px;
+    height: 800px;
+  }
+}
