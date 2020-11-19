@@ -31,10 +31,38 @@
   font-size: 20px;
   width: 300px;
   font-family: "Kaushan Script", cursive;
+  -webkit-animation: scrawl 6s ease alternate infinite;
+  -moz-animation: scrawl 6s ease alternate infinite;
+  -o-animation: scrawl 6s ease alternate infinite;
   animation: scrawl 6s ease alternate infinite;
 }
 .no-curses-message {
   color: rgb(202, 202, 202);
+}
+
+@-webkit-keyframes scrawl {
+  from {
+    color: rgb(54, 54, 54);
+  }
+  to {
+    color: rgb(65, 15, 15);
+  }
+}
+@-moz-keyframes scrawl {
+  from {
+    color: rgb(54, 54, 54);
+  }
+  to {
+    color: rgb(65, 15, 15);
+  }
+}
+@-o-keyframes scrawl {
+  from {
+    color: rgb(54, 54, 54);
+  }
+  to {
+    color: rgb(65, 15, 15);
+  }
 }
 @keyframes scrawl {
   from {
@@ -59,11 +87,60 @@
   font-family: "Kaushan Script", cursive;
   font-size: 14px;
   color: rgb(211, 211, 211);
+  -webkit-animation: entice 10s ease alternate infinite;
+  -moz-animation: entice 10s ease alternate infinite;
+  -o-animation: entice 10s ease alternate infinite;
   animation: entice 10s ease alternate infinite;
+
   &:focus {
     outline: none;
     box-shadow: 0 20px 30px rgba(48, 48, 48, 0.5),
       inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  }
+}
+
+@-webkit-keyframes entice {
+  from {
+    box-shadow: 0 10px 20px rgb(61, 8, 8),
+      inset 5px 30px 30px 5px rgb(247, 234, 234);
+    color: black;
+  }
+  to {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 20px 30px rgba(119, 26, 26, 0.5),
+      inset 0px 0px 30px 5px rgba(255, 230, 230, 0.76);
+    margin-top: -5%;
+  }
+}
+
+@-moz-keyframes entice {
+  from {
+    box-shadow: 0 10px 20px rgb(61, 8, 8),
+      inset 5px 30px 30px 5px rgb(247, 234, 234);
+    color: black;
+  }
+  to {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 20px 30px rgba(119, 26, 26, 0.5),
+      inset 0px 0px 30px 5px rgba(255, 230, 230, 0.76);
+    margin-top: -5%;
+  }
+}
+
+@-o-keyframes entice {
+  from {
+    box-shadow: 0 10px 20px rgb(61, 8, 8),
+      inset 5px 30px 30px 5px rgb(247, 234, 234);
+    color: black;
+  }
+  to {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 20px 30px rgba(119, 26, 26, 0.5),
+      inset 0px 0px 30px 5px rgba(255, 230, 230, 0.76);
+    margin-top: -5%;
   }
 }
 

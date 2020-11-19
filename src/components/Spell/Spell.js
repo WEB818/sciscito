@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Spell.scss";
 
 export default function Spell(props) {

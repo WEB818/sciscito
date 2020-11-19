@@ -32,11 +32,45 @@ code {
     box-shadow: 10px 20px 40px#000000,
       inset 0px 10px 30px 5px rgba(255, 255, 255, 0.75);
 
+    -webkit-animation: engorgio 2s ease-out forwards;
+    -moz-animation: engorgio 2s ease-out forwards;
+    -o-animation: engorgio 2s ease-out forwards;
     animation: engorgio 2s ease-out forwards;
   }
 }
 .curse-filter-options {
   background-color: rgba(255, 255, 255, 0.75);
+}
+@-webkit-keyframes engorgio {
+  to {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    background-color: #540d0d;
+    color: blanchedalmond;
+  }
+}
+
+@-moz-keyframes engorgio {
+  to {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    background-color: #540d0d;
+    color: blanchedalmond;
+  }
+}
+@-o-keyframes engorgio {
+  to {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    background-color: #540d0d;
+    color: blanchedalmond;
+  }
 }
 @keyframes engorgio {
   to {

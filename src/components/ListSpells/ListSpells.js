@@ -1,31 +1,24 @@
-import React, { Component } from "react";
-
-import Spell from "./Spell";
-
+import React from "react";
+import Spell from "../Spell/Spell";
 import "./ListSpells.scss";
-export default class ListSpells extends Component {
-  clearResults = () => {
-    document.getElementById("search").value = "";
-    this.props.searchSpells("");
-    this.props.clearResults();
-  };
 
-  cursesList = () => {
-    if (this.props.spells.length === 0) {
+export default function ListSpells(props) {
+  const cursesList = () => {
+    if (props.spells.length === 0) {
       return (
         <div className="ListSpells__container">
           <p className="no-curses-message">
             There are no curses that match your search.
           </p>
-          <button className="curse-button" onClick={this.props.clearResults}>
+          <button className="curse-button" onClick={props.clearResults}>
             Exit
           </button>
         </div>
       );
-    } else if (!this.props.filtered) {
+    } else if (!props.filtered) {
       return (
         <div className="ListCurses">
-          {this.props.spells.map((spell) => (
+          {props.spells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -35,10 +28,10 @@ export default class ListSpells extends Component {
           ))}
         </div>
       );
-    } else if (this.props.filtered) {
+    } else if (props.filtered) {
       return (
         <div className="ListCurses">
-          {this.props.filteredByTypeSpells.map((spell) => (
+          {props.filteredByTypeSpells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -51,7 +44,7 @@ export default class ListSpells extends Component {
     } else {
       return (
         <div className="ListCurses">
-          {this.props.spells.map((spell) => (
+          {props.spells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -64,8 +57,8 @@ export default class ListSpells extends Component {
     }
   };
 
-  spellsList = () => {
-    if (this.props.spells.length === 0) {
+  const spellsList = () => {
+    if (props.spells.length === 0) {
       return (
         <div className="ListSpells__container">
           <p className="restricted-message">
@@ -74,16 +67,16 @@ export default class ListSpells extends Component {
           </p>
           <button
             className="curse-button"
-            onClick={this.props.enterRestrictedSection}
+            onClick={props.enterRestrictedSection}
           >
             Search Curses
           </button>
         </div>
       );
-    } else if (!this.props.filtered) {
+    } else if (!props.filtered) {
       return (
         <div className="ListSpells">
-          {this.props.spells.map((spell) => (
+          {props.spells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -93,10 +86,10 @@ export default class ListSpells extends Component {
           ))}
         </div>
       );
-    } else if (this.props.filtered) {
+    } else if (props.filtered) {
       return (
         <div className="ListSpells">
-          {this.props.filteredByTypeSpells.map((spell) => (
+          {props.filteredByTypeSpells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -109,7 +102,7 @@ export default class ListSpells extends Component {
     } else {
       return (
         <div className="ListSpells">
-          {this.props.spells.map((spell) => (
+          {props.spells.map((spell) => (
             <Spell
               key={spell._id}
               name={spell.spell}
@@ -122,11 +115,5 @@ export default class ListSpells extends Component {
     }
   };
 
-  render() {
-    return (
-      <>
-        {!this.props.restrictedSection ? this.spellsList() : this.cursesList()}
-      </>
-    );
-  }
+  return <>{!props.restrictedSection ? spellsList() : cursesList()}</>;
 }
