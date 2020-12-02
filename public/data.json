@@ -1,14 +1,14 @@
 [
-  { "type": "Spell", "spell": "Accio", "effect": "call object" },
-  { "type": "Charm", "spell": "Reducio", "effect": "shrink object" },
-  { "type": "Enchantment", "spell": "Engorgio", "effect": "enlarge object" },
-  { "type": "Jinx", "spell": "Flambagio", "effect": "Enflame opponent" },
-  { "type": "Hex", "spell": "Googooglio", "effect": "get an answer immediately" },
-  { "type": "Curse", "spell": "Crucio", "effect": "torture opponent" },
-  { "type": "Spell", "spell": "Baccio", "effect": "call object" },
-  { "type": "Charm", "spell": "Ereducio", "effect": "shrink object" },
-  { "type": "Enchantment", "spell": "Mengorgio", "effect": "enlarge object" },
-  { "type": "Jinx", "spell": "Aflambagio", "effect": "Enflame opponent" },
-  { "type": "Hex", "spell": "Igoogooglio", "effect": "get an answer immediately" },
-  { "type": "Curse", "spell": "Ocrucio", "effect": "torture opponent" }
+  { "id": "1", "type": "Spell", "spell": "Accio", "effect": "call object" },
+  { "id": "2", "type": "Charm", "spell": "Reducio", "effect": "shrink object" },
+  { "id": "3", "type": "Enchantment", "spell": "Engorgio", "effect": "enlarge object" },
+  { "id": "4", "type": "Jinx", "spell": "Flambagio", "effect": "Enflame opponent" },
+  { "id": "5", "type": "Hex", "spell": "Googooglio", "effect": "get an answer immediately" },
+  { "id": "6", "type": "Curse", "spell": "Crucio", "effect": "torture opponent" },
+  { "id": "7", "type": "Spell", "spell": "Baccio", "effect": "call object" },
+  { "id": "8", "type": "Charm", "spell": "Ereducio", "effect": "shrink object" },
+  { "id": "9", "type": "Enchantment", "spell": "Mengorgio", "effect": "enlarge object" },
+  { "id": "10", "type": "Jinx", "spell": "Aflambagio", "effect": "Enflame opponent" },
+  { "id": "11", "type": "Hex", "spell": "Igoogooglio", "effect": "get an answer immediately" },
+  { "id": "12", "type": "Curse", "spell": "Ocrucio", "effect": "torture opponent" }
 ]

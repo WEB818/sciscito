@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
   }
   &__filters {
     width: 50vw;
@@ -377,7 +378,7 @@
     height: 80px;
     width: 80px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-      inset 5px 30px 30px 5px rgb(60, 60, 60);
+      inset 5px 30px 30px 5px rgb(255, 255, 255);
     color: white;
   }
   to {
@@ -393,7 +394,7 @@
     height: 80px;
     width: 80px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-      inset 5px 30px 30px 5px rgb(60, 60, 60);
+      inset 5px 30px 30px 5px rgb(255, 255, 255);
     color: white;
   }
   to {
@@ -409,7 +410,7 @@
     height: 80px;
     width: 80px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-      inset 5px 30px 30px 5px rgb(60, 60, 60);
+      inset 5px 30px 30px 5px rgb(255, 255, 255);
     color: white;
   }
   to {
@@ -425,7 +426,7 @@
     height: 80px;
     width: 80px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-      inset 5px 30px 30px 5px rgb(60, 60, 60);
+      inset 5px 30px 30px 5px rgb(255, 255, 255);
     color: white;
   }
   to {
@@ -440,7 +441,7 @@
   position: fixed;
   top: 5%;
   border-radius: 50%;
-  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand32x32.png"),
     auto;
   font-family: "Kaushan Script", cursive;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
@@ -460,17 +461,17 @@
   top: 5%;
   right: 5%;
   border-radius: 50%;
-  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand32x32.png"),
     auto;
   font-family: "Kaushan Script", cursive;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
     inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
   border: none;
   text-align: center;
-  -webkit-animation: reveal 10s ease-in-out infinite alternate;
-  -moz-animation: reveal 10s ease-in-out infinite alternate;
-  -o-animation: reveal 10s ease-in-out infinite alternate;
-  animation: reveal 10s ease-in-out infinite alternate;
+  -webkit-animation: reveal 4s ease-in-out infinite alternate;
+  -moz-animation: reveal 4s ease-in-out infinite alternate;
+  -o-animation: reveal 4s ease-in-out infinite alternate;
+  animation: reveal 4s ease-in-out infinite alternate;
 
   &:focus {
     outline: none;
@@ -485,7 +486,7 @@
   position: fixed;
   top: 5%;
   border-radius: 50%;
-  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand32x32.png"),
     auto;
   font-family: "Kaushan Script", cursive;
   border: none;
@@ -546,7 +547,7 @@
 }
 .spell-type:nth-child(3) {
   left: 30%;
-  top: 30%;
+  top: 15%;
   font-size: 10px;
   -webkit-animation: enchantment 10s ease-in-out infinite alternate;
   -moz-animation: enchantment 10s ease-in-out infinite alternate;
@@ -633,7 +634,7 @@
   font-size: 20px;
   text-align: center;
   position: fixed;
-  top: 35%;
+  top: 45%;
   z-index: 50;
   &::placeholder {
     font-size: 18px;

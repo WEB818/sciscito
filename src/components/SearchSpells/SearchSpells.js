@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { countType } from "../../helpers";
 
 import "./SearchSpells.scss";
 
-export default function SearchSpells(props) {
+const SearchSpells = (props) => {
   const displayTypes = (obj) => {
     return obj.map((type, idx) => {
       if (type["count"] > 0) {
@@ -125,4 +125,5 @@ export default function SearchSpells(props) {
       </div>
     </div>
   );
-}
+};
+export default SearchSpells;

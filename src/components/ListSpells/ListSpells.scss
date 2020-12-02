@@ -1,11 +1,11 @@
 .ListSpells,
 .ListCurses {
-  position: absolute;
+  position: fixed;
   width: 200px;
-  height: 50vh;
+  height: 40%;
   overflow: auto;
   overscroll-behavior-y: contain;
-  top: 40%;
+  top: 55%;
   bottom: 10%;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@
 }
 .curse-button {
   background-color: rgb(65, 15, 15);
-  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand.png"),
+  cursor: url("https://hp-spellse.s3-us-west-1.amazonaws.com/cursor/wand32x32.png"),
     auto;
   box-shadow: 1px 5px 5px #540d0dad;
   border-radius: 50%;
