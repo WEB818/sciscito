@@ -20,7 +20,7 @@ export default function ListSpells(props) {
         <div className="ListCurses">
           {props.spells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}
@@ -33,7 +33,7 @@ export default function ListSpells(props) {
         <div className="ListCurses">
           {props.filteredByTypeSpells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}
@@ -46,7 +46,7 @@ export default function ListSpells(props) {
         <div className="ListCurses">
           {props.spells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}
@@ -61,7 +61,7 @@ export default function ListSpells(props) {
     if (props.spells.length === 0) {
       return (
         <div className="ListSpells__container">
-          <p className="restricted-message">
+          <p>
             There are no spells that match your search. Would you like to visit
             the Restricted Section?
           </p>
@@ -78,7 +78,7 @@ export default function ListSpells(props) {
         <div className="ListSpells">
           {props.spells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}
@@ -91,7 +91,7 @@ export default function ListSpells(props) {
         <div className="ListSpells">
           {props.filteredByTypeSpells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}
@@ -104,7 +104,7 @@ export default function ListSpells(props) {
         <div className="ListSpells">
           {props.spells.map((spell) => (
             <Spell
-              key={spell._id}
+              key={spell.id}
               name={spell.spell}
               effect={spell.effect}
               type={spell.type}

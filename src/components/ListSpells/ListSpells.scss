@@ -5,8 +5,8 @@
   height: 40%;
   overflow: auto;
   overscroll-behavior-y: contain;
-  top: 55%;
-  bottom: 10%;
+  top: 60%;
+  bottom: 15%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -16,6 +16,14 @@
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
+  }
+  @media (min-width: 768px) {
+    top: 40%;
+  }
+  @media (min-width: 1440px) {
+    top: 45%;
+    bottom: 10%;
+    height: 50%;
   }
 }
 .ListCurses {
@@ -29,12 +37,15 @@
   text-align: center;
   margin: 0 60px;
   font-size: 20px;
-  width: 300px;
+  width: 260px;
   font-family: "Kaushan Script", cursive;
   -webkit-animation: scrawl 6s ease alternate infinite;
   -moz-animation: scrawl 6s ease alternate infinite;
   -o-animation: scrawl 6s ease alternate infinite;
   animation: scrawl 6s ease alternate infinite;
+  @media (min-width: 768px) {
+    margin: 0 30px;
+  }
 }
 .no-curses-message {
   color: rgb(202, 202, 202);

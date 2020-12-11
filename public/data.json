@@ -1,14 +1,14 @@
 [
-  { "id": "1", "type": "Spell", "spell": "Accio", "effect": "call object" },
+  { "id": "1", "type": "Spell", "spell": "Accio", "effect": "summon object" },
   { "id": "2", "type": "Charm", "spell": "Reducio", "effect": "shrink object" },
   { "id": "3", "type": "Enchantment", "spell": "Engorgio", "effect": "enlarge object" },
   { "id": "4", "type": "Jinx", "spell": "Flambagio", "effect": "Enflame opponent" },
   { "id": "5", "type": "Hex", "spell": "Googooglio", "effect": "get an answer immediately" },
   { "id": "6", "type": "Curse", "spell": "Crucio", "effect": "torture opponent" },
-  { "id": "7", "type": "Spell", "spell": "Baccio", "effect": "call object" },
-  { "id": "8", "type": "Charm", "spell": "Ereducio", "effect": "shrink object" },
-  { "id": "9", "type": "Enchantment", "spell": "Mengorgio", "effect": "enlarge object" },
-  { "id": "10", "type": "Jinx", "spell": "Aflambagio", "effect": "Enflame opponent" },
-  { "id": "11", "type": "Hex", "spell": "Igoogooglio", "effect": "get an answer immediately" },
-  { "id": "12", "type": "Curse", "spell": "Ocrucio", "effect": "torture opponent" }
+  { "id": "7", "type": "Spell", "spell": "Baccio", "effect": "send object away" },
+  { "id": "8", "type": "Charm", "spell": "Wingardium Leviosa", "effect": "float an object" },
+  { "id": "9", "type": "Enchantment", "spell": "Hilario", "effect": "send opponent into fits of laughter" },
+  { "id": "10", "type": "Jinx", "spell": "Sectum Sempra", "effect": "Slash opponent" },
+  { "id": "11", "type": "Hex", "spell": "Bathus Sonorus", "effect": "render opponent with the voicebox of a bat" },
+  { "id": "12", "type": "Curse", "spell": "Avada Kedavra", "effect": "murder opponent" }
 ]

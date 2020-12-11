@@ -509,10 +509,10 @@
 }
 .spell-type__disappear:nth-child(1) {
   left: 0%;
-  -webkit-animation: fade 6s ease-out forwards;
-  -moz-animation: fade 6s ease-out forwards;
-  -o-animation: fade 6s ease-out forwards;
-  animation: fade 6s ease-out forwards;
+  -webkit-animation: fade 3s ease-out forwards;
+  -moz-animation: fade 3s ease-out forwards;
+  -o-animation: fade 3s ease-out forwards;
+  animation: fade 3s ease-out forwards;
   height: 60px;
   width: 60px;
   @media (min-width: 768px) {
@@ -583,10 +583,10 @@
 }
 .spell-type__disappear:nth-child(4) {
   right: 20%;
-  -webkit-animation: fade 8s ease-out forwards;
-  -moz-animation: fade 8s ease-out forwards;
-  -o-animation: fade 8s ease-out forwards;
-  animation: fade 8s ease-out forwards;
+  -webkit-animation: fade 3s ease-out forwards;
+  -moz-animation: fade 3s ease-out forwards;
+  -o-animation: fade 3s ease-out forwards;
+  animation: fade 3s ease-out forwards;
   height: 60px;
   width: 60px;
   @media (min-width: 768px) {
@@ -610,10 +610,10 @@
 .spell-type__disappear:nth-child(5) {
   right: 20%;
   top: 5%;
-  -webkit-animation: fade 10s ease-out forwards;
-  -moz-animation: fade 10s ease-out forwards;
-  -o-animation: fade 10s ease-out forwards;
-  animation: fade 10s ease-out forwards;
+  -webkit-animation: fade 4s ease-out forwards;
+  -moz-animation: fade 4s ease-out forwards;
+  -o-animation: fade 4s ease-out forwards;
+  animation: fade 4s ease-out forwards;
   height: 60px;
   width: 60px;
   @media (min-width: 768px) {
@@ -644,6 +644,9 @@
     outline: none;
     box-shadow: 10px 20px 40px#540d0d,
       inset 0px 10px 30px 5px rgba(255, 255, 255, 0.75);
+  }
+  @media (min-width: 768px) {
+    top: 35%;
   }
 }
 

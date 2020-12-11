@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { Component } from "react";
 // import config from "./config";
 import Header from "./components/Header/Header";
 import SearchSpells from "./components/SearchSpells/SearchSpells";
